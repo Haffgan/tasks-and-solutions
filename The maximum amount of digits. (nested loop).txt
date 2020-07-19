@@ -1,0 +1,32 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int n=Convert.ToInt32(Console.ReadLine());
+
+        int max_n = 0;
+        int max_s = 0;
+        int s = 0;
+       
+       for (int i = 1; i <= n; i++) 
+           {
+           int m=i;
+              while (m>0)
+              {
+                  s=s+m%10;
+                  m=m/10;
+              }
+
+              if (s>max_s)
+                  {
+                  max_s = s;
+                  max_n = i;
+                  }
+               s=0;
+      }
+        
+        Console.WriteLine (max_n+" "+max_s);
+    }
+}
